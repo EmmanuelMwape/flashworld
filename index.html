@@ -4,117 +4,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="flashworld/ico.ico" type="image/x-icon">
     <title>Flashworld Global Trade Ecosystem</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            background-color: #f5f7fa; /* Light Gray Background */
-            color: #343a40; /* Dark Text */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
         }
-
         .navbar {
-            background-color: #003366; /* Dark Blue */
+            background-color: #003366;
+            padding: 1rem 0;
         }
-
         .navbar-brand img {
             height: 40px;
         }
-
         .nav-link {
-            color: #ffffff;
+            color: #ffffff !important;
+            font-weight: 500;
             transition: color 0.3s;
         }
-
         .nav-link:hover {
-            color: #ffc107; /* Amber Highlight on Hover */
+            color: #ffc107 !important;
         }
-
         .hero-section {
-            background: linear-gradient(120deg, #00509E, #003366);
+            background: linear-gradient(120deg, #003366, #0056b3);
             color: #ffffff;
-            padding: 120px 0;
-            text-align: center;
-            position: relative;
+            padding: 100px 0;
         }
-
-        .hero-section h1 {
-            font-size: 3.5rem;
+        .section {
+            padding: 80px 0;
+        }
+        .section-light {
+            background-color: #f8f9fa;
+        }
+        .section-dark {
+            background-color: #e9ecef;
+        }
+        h1, h2, h3 {
             font-weight: 700;
         }
-
-        .hero-section p {
-            font-size: 1.25rem;
-            margin-bottom: 30px;
-        }
-
-        .cta-button {
+        .btn-primary {
             background-color: #ffc107;
+            border-color: #ffc107;
             color: #003366;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 30px;
-            font-size: 1.1rem;
-            transition: background-color 0.3s;
         }
-
-        .cta-button:hover {
-            background-color: #e0a800; /* Darker Amber on Hover */
+        .btn-primary:hover {
+            background-color: #e0a800;
+            border-color: #e0a800;
         }
-
-        .section {
-            padding: 60px 0;
-        }
-
-        .section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #003366; /* Dark Blue */
-        }
-
-        .section p {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-        }
-
-        .card {
-            border: none;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .card-body {
-            padding: 30px;
-        }
-
         .footer {
             background-color: #003366;
             color: #ffffff;
             padding: 40px 0;
-            text-align: center;
         }
-
-        @media (max-width: 768px) {
-            .hero-section h1 {
-                font-size: 2.5rem; /* Responsive font size */
-            }
-
-            .hero-section p {
-                font-size: 1rem; /* Responsive font size */
-            }
+        .footer a {
+            color: #ffc107;
+        }
+        .img-fluid {
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
 
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="logo.png" alt="Flashworld Logo"> Flashworld
+                <img src="flashworld/fwlogo.png" alt="Flashworld Logo"> Flashworld
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -122,181 +82,172 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#hero-section">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about-section">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#model-section">Model</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#operations-section">Operations</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#governance-section">Governance</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact-section">Contact</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#ecosystem">Ecosystem</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#impact">Impact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#partners">Partners</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <div class="hero-section" id="hero-section">
+    <section class="hero-section" id="home">
         <div class="container">
-            <h1>Flashworld: Empowering Global Trade</h1>
-            <p>Join us in a transformative journey towards sustainable economic growth and inclusive business solutions.</p>
-            <a href="#" class="btn cta-button">Get Started</a>
-        </div>
-    </div>
-
-    <!-- About Us Section -->
-    <div class="section" id="about-section">
-        <div class="container text-center">
-            <h2>About Us</h2>
-            <p>Flashworld is dedicated to creating a global trade ecosystem that connects businesses, customers, and governments for sustainable development. Our vision includes:</p>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Job Creation</h5>
-                            <p class="card-text">Creating millions of jobs globally through innovative business solutions.</p>
-                        </div>
-                    </div>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1>Empowering Global Trade</h1>
+                    <p class="lead">Join us in a transformative journey towards sustainable economic growth and inclusive business solutions.</p>
+                    <a href="#" class="btn btn-primary btn-lg">Get Started</a>
                 </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Business Support</h5>
-                            <p class="card-text">Supporting local and global businesses with resources and mentorship.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Poverty Reduction</h5>
-                            <p class="card-text">Developing sustainable models to reduce poverty and improve livelihoods.</p>
-                        </div>
-                    </div>
+                <div class="col-md-6">
+                    <img src="flashworld/images/about.png" alt="Global Trade" class="img-fluid">
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Flashworld Model Section -->
-    <div class="section" id="model-section">
-        <div class="container text-center">
-            <h2>The Flashworld Model</h2>
-            <p>A revolutionary approach to global trade through:</p>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Business Incubation</h5>
-                            <p class="card-text">Incubating businesses with tailored support and resources.</p>
-                        </div>
-                    </div>
+    <section class="section section-light" id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="/api/placeholder/600/400" alt="About Flashworld" class="img-fluid">
                 </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Digital Infrastructure</h5>
-                            <p class="card-text">Creating hubs for mentorship, digital infrastructure, and workspaces.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Logistics Support</h5>
-                            <p class="card-text">Supporting logistics and distribution through strategic partnerships.</p>
-                        </div>
-                    </div>
+                <div class="col-md-6">
+                    <h2>About Flashworld</h2>
+                    <p>Flashworld is dedicated to creating a global trade ecosystem that connects businesses, customers, and governments for sustainable development.</p>
+                    <h3>Vision</h3>
+                    <p>To lead global trade by 2035, driving sustainable economic growth and fostering seamless international collaboration.</p>
+                    <h3>Mission</h3>
+                    <p>To create an inclusive economic framework, enabling nations and businesses to thrive within our ecosystem, while reducing poverty and creating millions of jobs worldwide.</p>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Operations Section -->
-    <div class="section" id="operations-section">
-        <div class="container text-center">
-            <h2>Our Operations</h2>
-            <p><strong>15 million group businesses</strong> and <strong>150 million personal businesses</strong> in Zambia alone.</p>
-            <p>A global strategy to increase wealth across participating countries through self-sustaining ecosystems.</p>
-        </div>
-    </div>
-
-    <!-- Governance Section -->
-    <div class="section" id="governance-section">
-        <div class="container text-center">
-            <h2>Governance & Collaboration</h2>
-            <p>Flashworld collaborates with nations, international organizations, and charities to create a sustainable, inclusive business environment. Our governance structure ensures transparency and accountability.</p>
-        </div>
-    </div>
-
-    <!-- Financial Support Section -->
-    <div class="section" id="financial-support-section">
-        <div class="container text-center">
-            <h2>Financial Support</h2>
-            <p>Flashworld is backed by global charities and financial institutions, ensuring access to:</p>
-            <ul class="list-unstyled">
-                <li><i class="fas fa-check-circle"></i> Grants, loans, and credit options.</li>
-                <li><i class="fas fa-check-circle"></i> Financing for sustainable business operations.</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- Contact Section -->
-    <div class="section" id="contact-section">
-        <div class="container text-center">
-            <h2>Contact Us</h2>
-            <p>Have questions or want to collaborate? Reach out!</p>
-            <form>
-                <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="Your Name" required>
+    <section class="section section-dark" id="ecosystem">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2>Our Ecosystem</h2>
+                    <p>The Flashworld ecosystem is designed to support and nurture businesses at every stage of their growth:</p>
+                    <ul>
+                        <li>Business Incubation</li>
+                        <li>Digital Infrastructure</li>
+                        <li>Logistics Support</li>
+                        <li>Financial Assistance</li>
+                        <li>Global Market Access</li>
+                    </ul>
                 </div>
-                <div class="mb-3">
-                    <input type="email" class="form-control" placeholder="Your Email" required>
+                <div class="col-md-6">
+                    <img src="/api/placeholder/600/400" alt="Flashworld Ecosystem" class="img-fluid">
                 </div>
-                <div class="mb-3">
-                    <textarea class="form-control" rows="3" placeholder="Your Message" required></textarea>
-                </div>
-                <button type="submit" class="btn cta-button">Send Message</button>
-            </form>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Footer -->
+    <section class="section section-light" id="impact">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="/api/placeholder/600/400" alt="Our Impact" class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                    <h2>Our Impact</h2>
+                    <p>Flashworld is making a significant impact on global trade and local economies:</p>
+                    <ul>
+                        <li>15 million group businesses</li>
+                        <li>150 million personal businesses in Zambia alone</li>
+                        <li>Job creation on a massive scale</li>
+                        <li>Poverty reduction through sustainable business models</li>
+                        <li>Improved national economies and international trade</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-dark" id="partners">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2>Our Partners</h2>
+                    <p>Flashworld collaborates with a wide range of partners to achieve its goals:</p>
+                    <ul>
+                        <li>National Governments</li>
+                        <li>International Organizations</li>
+                        <li>Global Charities</li>
+                        <li>Financial Institutions</li>
+                        <li>Technology Companies</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <img src="/api/placeholder/600/400" alt="Our Partners" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-light" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Contact Us</h2>
+                    <p>Have questions or want to collaborate? Reach out to us!</p>
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Your Name">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <img src="/api/placeholder/600/400" alt="Contact Us" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Flashworld. All rights reserved. | Designed by Your Name</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Flashworld Global Trade Ecosystem</h3>
+                    <p>1234 Market Street, Suite 100<br>Lusaka, Zambia</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Contact</h3>
+                    <p>Phone: +260 211 123456<br>Email: <a href="mailto:info@flashworld.com">info@flashworld.com</a></p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Follow Us</h3>
+                    <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="me-3"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+					            <a class="navbar-brand" href="#">
+                <img src="flashworld/fwlogo.png" alt="Flashworld Logo"> Flashworld
+            </a>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>&copy; 2024 Flashworld. All rights reserved.</p>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Smooth scrolling for navbar links
-        $(document).ready(function () {
-            $('.nav-link').on('click', function (event) {
-                if (this.hash !== "") {
-                    event.preventDefault();
-                    const hash = this.hash;
 
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top
-                    }, 800, function () {
-                        window.location.hash = hash;
-                    });
-                }
-            });
-        });
-    </script>
 </body>
 
 </html>
